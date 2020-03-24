@@ -1,0 +1,75 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>Springmvc.app</groupId>
+  <artifactId>Springmvc.RegisterApp</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+
+  <name>org.springmvc.register</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+  	<spring.version>5.1.5.RELEASE</spring.version>
+  </properties>
+  
+  <dependencies>
+    <dependency>
+  		<groupId>org.springframework</groupId>
+  		<artifactId>spring-core</artifactId>
+  		<version>${spring.version}</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.springframework</groupId>
+  		<artifactId>spring-context</artifactId>
+  		<version>${spring.version}</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.springframework</groupId>
+  		<artifactId>spring-webmvc</artifactId>
+  		<version>${spring.version}</version>
+  	</dependency>
+  
+<dependency>
+    <groupId>javax.servlet</groupId>
+    <artifactId>javax.servlet-api</artifactId>
+    <version>3.1.0</version>
+    <scope>provided</scope>
+</dependency>
+
+<dependency>
+    <groupId>javax.servlet.jsp</groupId>
+    <artifactId>jsp-api</artifactId>
+    <version>2.2</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+     <groupId>org.hibernate</groupId>
+     <artifactId>hibernate-validator</artifactId>
+     <version>5.4.1.Final</version>
+   </dependency>
+  </dependencies>
+  <build>
+    <finalName>SpringMCV-RegisterApp</finalName>
+     <sourceDirectory>src/main/java</sourceDirectory>
+     <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.6.1</version>
+        <configuration>
+       	<!--  <release>10</release> -->
+       	<target>1.8</target>
+       	<source>1.8</source>
+        </configuration>
+      </plugin>
+      
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>3.2.0</version>
+      </plugin>
+    </plugins>
+  </build>
+</project>
