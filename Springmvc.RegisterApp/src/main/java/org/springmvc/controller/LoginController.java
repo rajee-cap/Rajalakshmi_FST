@@ -19,7 +19,7 @@ public class LoginController {
 	UserService userService= new UserServiceImpl();
 	
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
-	  public ModelAndView showRegister(HttpServletRequest request, HttpServletResponse response) {
+	  public ModelAndView showLogin(HttpServletRequest request, HttpServletResponse response) {
 	    ModelAndView mav = new ModelAndView("LoginPage");
 	    mav.addObject("login", new Login());
 	    return mav;
